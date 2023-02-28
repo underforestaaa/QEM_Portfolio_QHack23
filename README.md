@@ -20,20 +20,21 @@ So, to calculate elements of a QUBO, a list of asset prices during these 100 day
 pandas_datareader and yfinance Python libraries. The code, obtaining data for S&P 500 assets is contained in "Data" folder, and the resulting lists of prices
 is in the file "S&P_500.csv". This data is extracted later for MPT realization. 
 
+In this project we worked with 2 datasets, as described in Data notebook. 10-asset portfolio: ['AAPL', 'MSFT', 'GOOGL', 'CSCO', 'KR', 'LHX', 'IVZ', 'IPGP', 'WMT',  'ABC']. And 20-asset portfolio: ['DISH', 'DG', 'DLTR', 'D', 'DPZ', 'DOV', 'DOW', 'DTE','SEE', 'SRE','AAPL', 'MSFT', 'GOOGL', 'CSCO', 'KR', 'LHX', 'IVZ', 'IPGP', 'WMT',  'ABC']
+
+
 # Quantum-inspired Algorithm
 
 In this work we chose the algorithm, simulating the Coherent Ising Machine. The QEM-free QUBO solver is in Jupyter Notebook "Inspired annealing".
-The algorithm is similar to the one, published in this article: https://doi.org/10.1364/OE.27.010288. Our QEM scheme is TBA. 
+The algorithm is similar to the one, published in this article: https://doi.org/10.1364/OE.27.010288. Our QEM scheme is based on bit-flip error cancellation from DOI: 10.1126/sciadv.abi8009. The results can be found in Notebook. As it appears, our QEM-inspired algorithm is not very valid, so classical postprocessing method may be more beneficial to quantum inspired algorithms. 
 
 # VQE algorithm
 
 In this project we will test VQE algorithm, executing it on IonQ computer. The IonQ device is chosen due to its high fidelity of operations and all-to-all connectivity, as it is especially important for high-rank real data.
 We chose Measurement EM, as we have explicit data on errors in IonQ. 
 
-UPD(leonard-stormbreaker): due to overloaded queue of IonQ device, we haven't managed to check VQE method to solve the MPT problem on a real quantum device and check if QEM protocols are efficient and valide particulary in VQE paradigm. Explicit explanation can be found in QUBO_VQE.ipynb file in VQE branch.
+However, due to overloaded queue of IonQ device, we haven't managed to check VQE method to solve the MPT problem on a real quantum device and check if QEM protocols are efficient and valide particulary in VQE paradigm. Explicit explanation can be found in QUBO_VQE.ipynb file in VQE branch.
 
 # Quantum annealing
 
 We will repeat QEM method, proposed in this article: arXiv:2210.08862 , to evaluate its results on real-data and with several hardwares.  
-
-UPD(Schmelek): we were not able to demonstrate error mitigation. Only hardware computations were performed and compared with simulated annealing.
