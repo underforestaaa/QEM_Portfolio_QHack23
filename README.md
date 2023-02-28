@@ -35,3 +35,5 @@ UPD(leonard-stormbreaker): due to overloaded queue of IonQ device, we haven't ma
 # Quantum annealing
 
 We will repeat QEM method, proposed in this article: arXiv:2210.08862 , to evaluate its results on real-data and with several hardwares.  
+
+UPD(Schmelek): we were not able to demonstrate error mitigation. Only hardware computations were performed and compared with simulated annealing.
