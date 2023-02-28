@@ -30,6 +30,8 @@ The algorithm is similar to the one, published in this article: https://doi.org/
 In this project we will test VQE algorithm, executing it on IonQ computer. The IonQ device is chosen due to its high fidelity of operations and all-to-all connectivity, as it is especially important for high-rank real data.
 We chose Measurement EM, as we have explicit data on errors in IonQ. 
 
+UPD(leonard-stormbreaker): due to overloaded queue of IonQ device, we haven't managed to check VQE method to solve the MPT problem on a real quantum device and check if QEM protocols are efficient and valide particulary in VQE paradigm. Explicit explanation can be found in QUBO_VQE.ipynb file in project files.
+
 # Quantum annealing
 
 We will repeat QEM method, proposed in this article: arXiv:2210.08862 , to evaluate its results on real-data and with several hardwares.  
